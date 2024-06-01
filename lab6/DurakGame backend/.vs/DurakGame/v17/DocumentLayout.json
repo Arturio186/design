@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\u0410\u0440\u0442\u0443\u0440\\source\\repos\\DurakGame\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A3656640-FB28-412C-B367-7A8273BF0752}|DurakGame\\DurakGame.csproj|c:\\users\\\u0430\u0440\u0442\u0443\u0440\\source\\repos\\durakgame\\durakgame\\core\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3656640-FB28-412C-B367-7A8273BF0752}|DurakGame\\DurakGame.csproj|solutionrelative:durakgame\\core\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3656640-FB28-412C-B367-7A8273BF0752}|DurakGame\\DurakGame.csproj|c:\\users\\\u0430\u0440\u0442\u0443\u0440\\source\\repos\\durakgame\\durakgame\\core\\move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3656640-FB28-412C-B367-7A8273BF0752}|DurakGame\\DurakGame.csproj|solutionrelative:durakgame\\core\\move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3656640-FB28-412C-B367-7A8273BF0752}|DurakGame\\DurakGame.csproj|c:\\users\\\u0430\u0440\u0442\u0443\u0440\\source\\repos\\durakgame\\durakgame\\core\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3656640-FB28-412C-B367-7A8273BF0752}|DurakGame\\DurakGame.csproj|solutionrelative:durakgame\\core\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3656640-FB28-412C-B367-7A8273BF0752}|DurakGame\\DurakGame.csproj|c:\\users\\\u0430\u0440\u0442\u0443\u0440\\source\\repos\\durakgame\\durakgame\\hubs\\gamehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3656640-FB28-412C-B367-7A8273BF0752}|DurakGame\\DurakGame.csproj|solutionrelative:durakgame\\hubs\\gamehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3656640-FB28-412C-B367-7A8273BF0752}|DurakGame\\DurakGame.csproj|c:\\users\\\u0430\u0440\u0442\u0443\u0440\\source\\repos\\durakgame\\durakgame\\core\\suit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3656640-FB28-412C-B367-7A8273BF0752}|DurakGame\\DurakGame.csproj|solutionrelative:durakgame\\core\\suit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3656640-FB28-412C-B367-7A8273BF0752}|DurakGame\\DurakGame.csproj|c:\\users\\\u0430\u0440\u0442\u0443\u0440\\source\\repos\\durakgame\\durakgame\\core\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3656640-FB28-412C-B367-7A8273BF0752}|DurakGame\\DurakGame.csproj|solutionrelative:durakgame\\core\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3656640-FB28-412C-B367-7A8273BF0752}|DurakGame\\DurakGame.csproj|c:\\users\\\u0430\u0440\u0442\u0443\u0440\\source\\repos\\durakgame\\durakgame\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3656640-FB28-412C-B367-7A8273BF0752}|DurakGame\\DurakGame.csproj|solutionrelative:durakgame\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0443\u0440\\source\\repos\\DurakGame\\DurakGame\\Program.cs",
+              "RelativeDocumentMoniker": "DurakGame\\Program.cs",
+              "ToolTip": "C:\\Users\\\u0410\u0440\u0442\u0443\u0440\\source\\repos\\DurakGame\\DurakGame\\Program.cs",
+              "RelativeToolTip": "DurakGame\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T19:52:08.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0443\u0440\\source\\repos\\DurakGame\\DurakGame\\Core\\Player.cs",
+              "RelativeDocumentMoniker": "DurakGame\\Core\\Player.cs",
+              "ToolTip": "C:\\Users\\\u0410\u0440\u0442\u0443\u0440\\source\\repos\\DurakGame\\DurakGame\\Core\\Player.cs",
+              "RelativeToolTip": "DurakGame\\Core\\Player.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAIAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T18:48:45.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Move.cs",
+              "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0443\u0440\\source\\repos\\DurakGame\\DurakGame\\Core\\Move.cs",
+              "RelativeDocumentMoniker": "DurakGame\\Core\\Move.cs",
+              "ToolTip": "C:\\Users\\\u0410\u0440\u0442\u0443\u0440\\source\\repos\\DurakGame\\DurakGame\\Core\\Move.cs",
+              "RelativeToolTip": "DurakGame\\Core\\Move.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAvwE0AAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T14:05:17.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Suit.cs",
+              "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0443\u0440\\source\\repos\\DurakGame\\DurakGame\\Core\\Suit.cs",
+              "RelativeDocumentMoniker": "DurakGame\\Core\\Suit.cs",
+              "ToolTip": "C:\\Users\\\u0410\u0440\u0442\u0443\u0440\\source\\repos\\DurakGame\\DurakGame\\Core\\Suit.cs",
+              "RelativeToolTip": "DurakGame\\Core\\Suit.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T18:22:05.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Card.cs",
+              "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0443\u0440\\source\\repos\\DurakGame\\DurakGame\\Core\\Card.cs",
+              "RelativeDocumentMoniker": "DurakGame\\Core\\Card.cs",
+              "ToolTip": "C:\\Users\\\u0410\u0440\u0442\u0443\u0440\\source\\repos\\DurakGame\\DurakGame\\Core\\Card.cs",
+              "RelativeToolTip": "DurakGame\\Core\\Card.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAApwCcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T17:43:10.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Game.cs",
+              "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0443\u0440\\source\\repos\\DurakGame\\DurakGame\\Core\\Game.cs",
+              "RelativeDocumentMoniker": "DurakGame\\Core\\Game.cs",
+              "ToolTip": "C:\\Users\\\u0410\u0440\u0442\u0443\u0440\\source\\repos\\DurakGame\\DurakGame\\Core\\Game.cs",
+              "RelativeToolTip": "DurakGame\\Core\\Game.cs",
+              "ViewState": "AQIAAHEAAAAAAAAAAAAnwIEAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T13:32:56.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameHub.cs",
+              "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0443\u0440\\source\\repos\\DurakGame\\DurakGame\\Hubs\\GameHub.cs",
+              "RelativeDocumentMoniker": "DurakGame\\Hubs\\GameHub.cs",
+              "ToolTip": "C:\\Users\\\u0410\u0440\u0442\u0443\u0440\\source\\repos\\DurakGame\\DurakGame\\Hubs\\GameHub.cs",
+              "RelativeToolTip": "DurakGame\\Hubs\\GameHub.cs",
+              "ViewState": "AQIAAF8BAAAAAAAAAAAawG4BAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T11:04:36.477Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
