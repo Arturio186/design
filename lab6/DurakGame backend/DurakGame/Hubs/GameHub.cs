@@ -17,65 +17,7 @@ namespace DurakGame.Hubs
             await Clients.Caller.SendAsync("ReceiveGames", gameSummaries);
         }
 
-        public async Task CreateGame(string userName)
-        {
-            try 
-            {
-                Game game = new Game(userName, Context.ConnectionId);
-                Games.Add(game);
-
-                string gameID = game.guid.ToString();
-
-                await Groups.AddToGroupAsync(Context.ConnectionId, gameID);
-                await Clients.Group(gameID).SendAsync("GameCreatedByUser", gameID);
-
-                await Clients.All.SendAsync("GameCreated", new { gameID, userName });
-            }
-            catch (Exception ex) 
-            {
-                await Clients.Caller.SendAsync("Error", ex.Message);
-            }
-        }
-
-        public async Task JoinGame(string gameId, string userName)
-        {
-            try 
-            {
-                await Groups.AddToGroupAsync(Context.ConnectionId, gameId);
-
-                Player? creator = null;
-                Game? targetGame = null;
-
-                foreach (Game game in Games)
-                {
-                    if (game.guid.ToString() == gameId)
-                    {
-                        targetGame = game;
-                        creator = game.Players[0];
-
-                        game.JoinGame(userName, Context.ConnectionId);
-                    }
-                }
-
-                await Clients.Group(gameId).SendAsync("PlayerJoined", new { name = userName, connectionId = Context.ConnectionId, creatorName = creator?.Name });
-                await Clients.Group(gameId).SendAsync("GameStarted", 
-                    new { 
-                        deckCardsCount = targetGame?.Deck.Count, 
-                        gameId = gameId, 
-                        trump = new {
-                            suit = targetGame?.TrumpCard?.Suit.Name,
-                            value = (int)targetGame?.TrumpCard?.Value
-                        } 
-                    });
-
-            }
-            catch (Exception ex)
-            {
-                await Clients.Caller.SendAsync("Error", ex.Message);
-            }
-        }
-        
-        public async Task LeaveGame(string gameId)
+        public async Task GetEnemyCardsCount(string gameId)
         {
             try
             {
@@ -83,17 +25,12 @@ namespace DurakGame.Hubs
                 {
                     if (game.guid.ToString() == gameId)
                     {
-                        game.LeaveGame(Context.ConnectionId);
-
-                        if (game.isFinished)
+                        foreach (Player player in game.Players)
                         {
-                            int gameIndex = Games.IndexOf(game);
-                            Games.RemoveAt(gameIndex);
-
-                            await Clients.All.SendAsync("GameRemoved", game.guid.ToString());
-                            await Clients.Group(gameId).SendAsync("GameFinished", Context.ConnectionId);
-
-                            break;
+                            if (player.ConnectionId != Context.ConnectionId)
+                            {
+                                await Clients.Caller.SendAsync("EnemyCardsCount", player.Cards.Count);
+                            }
                         }
                     }
                 }
@@ -134,29 +71,77 @@ namespace DurakGame.Hubs
             }
         }
 
-        public async Task GetEnemyCardsCount(string gameId)
+        public async Task CreateGame(string userName)
+        {
+            try 
+            {
+                Game game = new Game(userName, Context.ConnectionId);
+                Games.Add(game);
+
+                string gameID = game.guid.ToString();
+
+                await Groups.AddToGroupAsync(Context.ConnectionId, gameID);
+                await Clients.Group(gameID).SendAsync("GameCreatedByUser", gameID);
+                await Clients.All.SendAsync("GameCreated", new { gameID, userName });
+            }
+            catch (Exception ex) 
+            {
+                await Clients.Caller.SendAsync("Error", ex.Message);
+            }
+        }
+
+        public async Task JoinGame(string gameId, string userName)
+        {
+            try 
+            {
+                await Groups.AddToGroupAsync(Context.ConnectionId, gameId);
+
+                Game targetGame = GetCurrentGame(gameId);
+
+                Player? creator = targetGame.Players[0];
+
+                targetGame.JoinGame(userName, Context.ConnectionId);
+
+                await Clients.Group(gameId).SendAsync("PlayerJoined", new { name = userName, connectionId = Context.ConnectionId, creatorName = creator?.Name });
+                await Clients.Group(gameId).SendAsync("GameStarted", 
+                    new { 
+                        deckCardsCount = targetGame?.Deck.Count, 
+                        gameId = gameId, 
+                        trump = new {
+                            suit = targetGame?.TrumpCard?.Suit.Name,
+                            value = (int)targetGame?.TrumpCard?.Value
+                        } 
+                    });
+
+            }
+            catch (Exception ex)
+            {
+                await Clients.Caller.SendAsync("Error", ex.Message);
+            }
+        }
+        
+        public async Task LeaveGame(string gameId)
         {
             try
             {
-                foreach (Game game in Games)
+                Game game = GetCurrentGame(gameId);
+                
+                game.LeaveGame(Context.ConnectionId);
+
+                if (game.isFinished)
                 {
-                    if (game.guid.ToString() == gameId)
-                    {
-                        foreach (Player player in game.Players)
-                        {
-                            if (player.ConnectionId != Context.ConnectionId)
-                            {
-                                await Clients.Caller.SendAsync("EnemyCardsCount", player.Cards.Count);
-                            }
-                        }
-                    }
+                    int gameIndex = Games.IndexOf(game);
+                    Games.RemoveAt(gameIndex);
+
+                    await Clients.All.SendAsync("GameRemoved", game.guid.ToString());
+                    await Clients.Group(gameId).SendAsync("GameFinished", Context.ConnectionId);     
                 }
             }
             catch (Exception ex)
             {
                 await Clients.Caller.SendAsync("Error", ex.Message);
             }
-        } 
+        }
 
         public async Task ThrowFirstCard(string gameId, CardValue cardValue, string cardSuit) 
         {
@@ -334,7 +319,6 @@ namespace DurakGame.Hubs
             try
             {
                 Game currentGame = GetCurrentGame(gameId);
-                Player currentPlayer = GetCurrentPlayer(currentGame, Context.ConnectionId);
 
                 currentGame.DropCards();
 
